@@ -1,0 +1,2045 @@
+{
+    "ada": {
+        "label": ["Boosted Classification Trees"],
+        "library": ["ada", "plyr"],
+        "type": ["Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Ensemble Model",
+            "Boosting",
+            "Implicit Feature Selection",
+            "Two Class Only",
+            "Handle Missing Predictor Data"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["iter", "maxdepth", "nu"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["#Trees", "Max Tree Depth", "Learning Rate"]
+        }
+    },
+    "AdaBag": {
+        "label": ["Bagged AdaBoost"],
+        "library": ["adabag", "plyr"],
+        "type": ["Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Ensemble Model",
+            "Boosting",
+            "Bagging",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mfinal", "maxdepth"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Trees", "Max Tree Depth"]
+        }
+    },
+    "AdaBoost.M1": {
+        "label": ["AdaBoost.M1"],
+        "library": ["adabag", "plyr"],
+        "type": ["Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Ensemble Model",
+            "Boosting",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mfinal", "maxdepth", "coeflearn"],
+            "class": ["numeric", "numeric", "character"],
+            "label": ["#Trees", "Max Tree Depth", "Coefficient Type"]
+        }
+    },
+    "adaboost": {
+        "label": ["AdaBoost Classification Trees"],
+        "library": ["fastAdaboost"],
+        "type": ["Classification"],
+        "tags": ["Tree-Based Model", "Ensemble Model", "Boosting", "Implicit Feature Selection", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["nIter", "method"],
+            "class": ["numeric", "character"],
+            "label": ["#Trees", "Method"]
+        }
+    },
+    "amdai": {
+        "label": ["Adaptive Mixture Discriminant Analysis"],
+        "library": ["adaptDA"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Mixture Model"],
+
+        "tuning_parameters": { "parameter": ["model"], "class": ["character"], "label": ["Model Type"] }
+    },
+    "avNNet": {
+        "label": ["Model Averaged Neural Network"],
+        "library": ["nnet"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network", "Ensemble Model", "Bagging", "L2 Regularization", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "decay", "bag"],
+            "class": ["numeric", "numeric", "logical"],
+            "label": ["#Hidden Units", "Weight Decay", "Bagging"]
+        }
+    },
+    "awnb": {
+        "label": ["Naive Bayes Classifier with Attribute Weighting"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": { "parameter": ["smooth"], "class": ["numeric"], "label": ["Smoothing Parameter"] }
+    },
+    "awtan": {
+        "label": ["Tree Augmented Naive Bayes Classifier with Attribute Weighting"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": {
+            "parameter": ["score", "smooth"],
+            "class": ["character", "numeric"],
+            "label": ["Score Function", "Smoothing Parameter"]
+        }
+    },
+    "bag": {
+        "label": ["Bagged Model"],
+        "library": ["caret"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Bagging", "Ensemble Model"],
+
+        "tuning_parameters": {
+            "parameter": ["vars"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "bagEarth": {
+        "label": ["Bagged MARS"],
+        "library": ["earth"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Multivariate Adaptive Regression Splines",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Bagging",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["nprune", "degree"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Terms", "Product Degree"]
+        }
+    },
+    "bagEarthGCV": {
+        "label": ["Bagged MARS using gCV Pruning"],
+        "library": ["earth"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Multivariate Adaptive Regression Splines",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Bagging",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["degree"], "class": ["numeric"], "label": ["Product Degree"] }
+    },
+    "bagFDA": {
+        "label": ["Bagged Flexible Discriminant Analysis"],
+        "library": ["earth", "mda"],
+        "type": ["Classification"],
+        "tags": [
+            "Multivariate Adaptive Regression Splines",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Bagging",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["degree", "nprune"],
+            "class": ["numeric", "numeric"],
+            "label": ["Product Degree", "#Terms"]
+        }
+    },
+    "bagFDAGCV": {
+        "label": ["Bagged FDA using gCV Pruning"],
+        "library": ["earth"],
+        "type": ["Classification"],
+        "tags": ["Multivariate Adaptive Regression Splines", "Ensemble Model", "Implicit Feature Selection", "Bagging"],
+
+        "tuning_parameters": { "parameter": ["degree"], "class": ["numeric"], "label": ["Product Degree"] }
+    },
+    "bam": {
+        "label": ["Generalized Additive Model using Splines"],
+        "library": ["mgcv"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Generalized Linear Model", "Generalized Additive Model"],
+
+        "tuning_parameters": {
+            "parameter": ["select", "method"],
+            "class": ["logical", "character"],
+            "label": ["Feature Selection", "Method"]
+        }
+    },
+    "bartMachine": {
+        "label": ["Bayesian Additive Regression Trees"],
+        "library": ["bartMachine"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Bayesian Model", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["num_trees", "k", "alpha", "beta", "nu"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric"],
+            "label": [
+                "#Trees",
+                "Prior Boundary",
+                "Base Terminal Node Hyperparameter",
+                "Power Terminal Node Hyperparameter",
+                "Degrees of Freedom"
+            ]
+        }
+    },
+    "bayesglm": {
+        "label": ["Bayesian Generalized Linear Model"],
+        "library": ["arm"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Logistic Regression",
+            "Linear Classifier",
+            "Bayesian Model",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "binda": {
+        "label": ["Binary Discriminant Analysis"],
+        "library": ["binda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Two Class Only", "Binary Predictors Only"],
+
+        "tuning_parameters": { "parameter": ["lambda.freqs"], "class": ["numeric"], "label": ["Shrinkage Intensity"] }
+    },
+    "blackboost": {
+        "label": ["Boosted Tree"],
+        "library": ["party", "mboost", "plyr"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Ensemble Model", "Boosting", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["mstop", "maxdepth"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Trees", "Max Tree Depth"]
+        }
+    },
+    "C5.0": {
+        "label": ["C5.0"],
+        "library": ["C50", "plyr"],
+        "type": ["Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Rule-Based Model",
+            "Implicit Feature Selection",
+            "Boosting",
+            "Ensemble Model",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["trials", "model", "winnow"],
+            "class": ["numeric", "character", "logical"],
+            "label": ["# Boosting Iterations", "Model Type", "Winnow"]
+        }
+    },
+    "C5.0Rules": {
+        "label": ["Single C5.0 Ruleset"],
+        "library": ["C50"],
+        "type": ["Classification"],
+        "tags": [
+            "Rule-Based Model",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["none"] }
+    },
+    "C5.0Tree": {
+        "label": ["Single C5.0 Tree"],
+        "library": ["C50"],
+        "type": ["Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["none"] }
+    },
+    "cforest": {
+        "label": ["Conditional Inference Random Forest"],
+        "library": ["party"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "chaid": {
+        "label": ["CHi-squared Automated Interaction Detection"],
+        "library": ["CHAID"],
+        "type": ["Classification"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Two Class Only", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["alpha2", "alpha3", "alpha4"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": [
+                "Merging Threshold",
+                "Splitting former Merged Threshold",
+                "\n                                                    Splitting former Merged Threshold"
+            ]
+        }
+    },
+    "ctree": {
+        "label": ["Conditional Inference Tree"],
+        "library": ["party"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["mincriterion"],
+            "class": ["numeric"],
+            "label": ["1 - P-Value Threshold"]
+        }
+    },
+    "ctree2": {
+        "label": ["Conditional Inference Tree"],
+        "library": ["party"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["maxdepth", "mincriterion"],
+            "class": ["numeric", "numeric"],
+            "label": ["Max Tree Depth", "1 - P-Value Threshold"]
+        }
+    },
+    "dda": {
+        "label": ["Diagonal Discriminant Analysis"],
+        "library": ["sparsediscrim"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier", "Polynomial Model", "Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["model", "shrinkage"],
+            "class": ["character", "character"],
+            "label": ["Model", "Shrinkage Type"]
+        }
+    },
+    "dnn": {
+        "label": ["Stacked AutoEncoder Deep Neural Network"],
+        "library": ["deepnet"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network"],
+
+        "tuning_parameters": {
+            "parameter": ["layer1", "layer2", "layer3", "hidden_dropout", "visible_dropout"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric"],
+            "label": ["Hidden Layer 1", "Hidden Layer 2", "Hidden Layer 3", "Hidden Dropouts", "Visible Dropout"]
+        }
+    },
+    "dwdLinear": {
+        "label": ["Linear Distance Weighted Discrimination"],
+        "library": ["kerndwd"],
+        "type": ["Classification"],
+        "tags": [
+            "Discriminant Analysis",
+            "L2 Regularization",
+            "Kernel Method",
+            "Linear Classifier",
+            "Distance Weighted Discrimination",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "qval"],
+            "class": ["numeric", "numeric"],
+            "label": ["Regularization Parameter", "q"]
+        }
+    },
+    "dwdPoly": {
+        "label": ["Distance Weighted Discrimination with Polynomial Kernel"],
+        "library": ["kerndwd"],
+        "type": ["Classification"],
+        "tags": [
+            "Discriminant Analysis",
+            "L2 Regularization",
+            "Kernel Method",
+            "Polynomial Model",
+            "Distance Weighted Discrimination",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "qval", "degree", "scale"],
+            "class": ["numeric", "numeric", "numeric", "numeric"],
+            "label": ["Regularization Parameter", "q", "Polynomial Degree", "Scale"]
+        }
+    },
+    "dwdRadial": {
+        "label": ["Distance Weighted Discrimination with Radial Basis Function Kernel"],
+        "library": ["kernlab", "kerndwd"],
+        "type": ["Classification"],
+        "tags": [
+            "Discriminant Analysis",
+            "L2 Regularization",
+            "Kernel Method",
+            "Radial Basis Function",
+            "Distance Weighted Discrimination",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "qval", "sigma"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["Regularization Parameter", "q", "Sigma"]
+        }
+    },
+    "earth": {
+        "label": ["Multivariate Adaptive Regression Spline"],
+        "library": ["earth"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Multivariate Adaptive Regression Splines", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["nprune", "degree"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Terms", "Product Degree"]
+        }
+    },
+    "evtree": {
+        "label": ["Tree Models from Genetic Algorithms"],
+        "library": ["evtree"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": { "parameter": ["alpha"], "class": ["numeric"], "label": ["Complexity Parameter"] }
+    },
+    "extraTrees": {
+        "label": ["Random Forest by Randomization"],
+        "library": ["extraTrees"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry", "numRandomCuts"],
+            "class": ["numeric", "numeric"],
+            "label": ["# Randomly Selected Predictors", "# Random Cuts"]
+        }
+    },
+    "fda": {
+        "label": ["Flexible Discriminant Analysis"],
+        "library": ["earth", "mda"],
+        "type": ["Classification"],
+        "tags": ["Multivariate Adaptive Regression Splines", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["degree", "nprune"],
+            "class": ["numeric", "numeric"],
+            "label": ["Product Degree", "#Terms"]
+        }
+    },
+    "gam": {
+        "label": ["Generalized Additive Model using Splines"],
+        "library": ["mgcv"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Generalized Linear Model", "Generalized Additive Model"],
+
+        "tuning_parameters": {
+            "parameter": ["select", "method"],
+            "class": ["logical", "character"],
+            "label": ["Feature Selection", "Method"]
+        }
+    },
+    "gamboost": {
+        "label": ["Boosted Generalized Additive Model"],
+        "library": ["mboost", "plyr", "import"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Additive Model",
+            "Ensemble Model",
+            "Boosting",
+            "Implicit Feature Selection",
+            "Two Class Only",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mstop", "prune"],
+            "class": ["numeric", "character"],
+            "label": ["# Boosting Iterations", "AIC Prune?"]
+        }
+    },
+    "gamLoess": {
+        "label": ["Generalized Additive Model using LOESS"],
+        "library": ["gam"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Generalized Linear Model", "Generalized Additive Model"],
+
+        "tuning_parameters": {
+            "parameter": ["span", "degree"],
+            "class": ["numeric", "numeric"],
+            "label": ["Span", "Degree"]
+        }
+    },
+    "gamSpline": {
+        "label": ["Generalized Additive Model using Splines"],
+        "library": ["gam"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Generalized Linear Model", "Generalized Additive Model"],
+
+        "tuning_parameters": { "parameter": ["df"], "class": ["numeric"], "label": ["Degrees of Freedom"] }
+    },
+    "gaussprLinear": {
+        "label": ["Gaussian Process"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Gaussian Process", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["Parameter"] }
+    },
+    "gaussprPoly": {
+        "label": ["Gaussian Process with Polynomial Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Gaussian Process", "Polynomial Model"],
+
+        "tuning_parameters": {
+            "parameter": ["degree", "scale"],
+            "class": ["numeric", "numeric"],
+            "label": ["Polynomial Degree", "Scale"]
+        }
+    },
+    "gaussprRadial": {
+        "label": ["Gaussian Process with Radial Basis Function Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Gaussian Process", "Radial Basis Function"],
+
+        "tuning_parameters": { "parameter": ["sigma"], "class": ["numeric"], "label": ["Sigma"] }
+    },
+    "gbm_h2o": {
+        "label": ["Gradient Boosting Machines"],
+        "library": ["h2o"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Boosting", "Ensemble Model", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["ntrees", "max_depth", "min_rows", "learn_rate", "col_sample_rate"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric"],
+            "label": [
+                "# Boosting Iterations",
+                "Max Tree Depth",
+                "Min. Terminal Node Size",
+                "Shrinkage",
+                "#Randomly Selected Predictors"
+            ]
+        }
+    },
+    "gbm": {
+        "label": ["Stochastic Gradient Boosting"],
+        "library": ["gbm", "plyr"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Boosting",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["n.trees", "interaction.depth", "shrinkage", "n.minobsinnode"],
+            "class": ["numeric", "numeric", "numeric", "numeric"],
+            "label": ["# Boosting Iterations", "Max Tree Depth", "Shrinkage", "Min. Terminal Node Size"]
+        }
+    },
+    "gcvEarth": {
+        "label": ["Multivariate Adaptive Regression Splines"],
+        "library": ["earth"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Multivariate Adaptive Regression Splines", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": { "parameter": ["degree"], "class": ["numeric"], "label": ["Product Degree"] }
+    },
+    "glmboost": {
+        "label": ["Boosted Generalized Linear Model"],
+        "library": ["plyr", "mboost"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Ensemble Model",
+            "Boosting",
+            "Linear Classifier",
+            "Two Class Only",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mstop", "prune"],
+            "class": ["numeric", "character"],
+            "label": ["# Boosting Iterations", "AIC Prune?"]
+        }
+    },
+    "glmnet_h2o": {
+        "label": ["glmnet"],
+        "library": ["h2o"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Implicit Feature Selection",
+            "L1 Regularization",
+            "L2 Regularization",
+            "Linear Classifier",
+            "Linear Regression",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["alpha", "lambda"],
+            "class": ["numeric", "numeric"],
+            "label": ["Mixing Percentage", "Regularization Parameter"]
+        }
+    },
+    "glmnet": {
+        "label": ["glmnet"],
+        "library": ["glmnet", "Matrix"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Implicit Feature Selection",
+            "L1 Regularization",
+            "L2 Regularization",
+            "Linear Classifier",
+            "Linear Regression"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["alpha", "lambda"],
+            "class": ["numeric", "numeric"],
+            "label": ["Mixing Percentage", "Regularization Parameter"]
+        }
+    },
+    "glmStepAIC": {
+        "label": ["Generalized Linear Model with Stepwise Feature Selection"],
+        "library": ["MASS"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Feature Selection Wrapper",
+            "Linear Classifier",
+            "Implicit Feature Selection",
+            "Two Class Only",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "gpls": {
+        "label": ["Generalized Partial Least Squares"],
+        "library": ["gpls"],
+        "type": ["Classification"],
+        "tags": ["Logistic Regression", "Partial Least Squares", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["K.prov"], "class": ["numeric"], "label": ["#Components"] }
+    },
+    "hda": {
+        "label": ["Heteroscedastic Discriminant Analysis"],
+        "library": ["hda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier", "Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["gamma", "lambda", "newdim"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["Gamma", "Lambda", "Dimension of the Discriminative Subspace"]
+        }
+    },
+    "hdda": {
+        "label": ["High Dimensional Discriminant Analysis"],
+        "library": ["HDclassif"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["threshold", "model"],
+            "class": ["character", "numeric"],
+            "label": ["Threshold", "Model Type"]
+        }
+    },
+    "hdrda": {
+        "label": ["High-Dimensional Regularized Discriminant Analysis"],
+        "library": ["sparsediscrim"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model", "Regularization", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["gamma", "lambda", "shrinkage_type"],
+            "class": ["numeric", "numeric", "character"],
+            "label": ["Gamma", "Lambda", "Shrinkage Type"]
+        }
+    },
+    "J48": {
+        "label": ["C4.5-like Trees"],
+        "library": ["RWeka"],
+        "type": ["Classification"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["C", "M"],
+            "class": ["numeric", "numeric"],
+            "label": ["Confidence Threshold", "Minimum Instances Per Leaf"]
+        }
+    },
+    "JRip": {
+        "label": ["Rule-Based Classifier"],
+        "library": ["RWeka"],
+        "type": ["Classification"],
+        "tags": ["Rule-Based Model", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["NumOpt", "NumFolds", "MinWeights"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["# Optimizations", "# Folds", "Min Weights"]
+        }
+    },
+    "kernelpls": {
+        "label": ["Partial Least Squares"],
+        "library": ["pls"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Partial Least Squares",
+            "Feature Extraction",
+            "Kernel Method",
+            "Linear Classifier",
+            "Linear Regression"
+        ],
+
+        "tuning_parameters": { "parameter": ["ncomp"], "class": ["numeric"], "label": ["#Components"] }
+    },
+    "kknn": {
+        "label": ["k-Nearest Neighbors"],
+        "library": ["kknn"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Prototype Models"],
+
+        "tuning_parameters": {
+            "parameter": ["kmax", "distance", "kernel"],
+            "class": ["numeric", "numeric", "character"],
+            "label": ["Max. #Neighbors", "Distance", "Kernel"]
+        }
+    },
+    "lda": {
+        "label": ["Linear Discriminant Analysis"],
+        "library": ["MASS"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "lda2": {
+        "label": ["Linear Discriminant Analysis"],
+        "library": ["MASS"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["dimen"], "class": ["numeric"], "label": ["#Discriminant Functions"] }
+    },
+    "Linda": {
+        "label": ["Robust Linear Discriminant Analysis"],
+        "library": ["rrcov"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier", "Robust Model"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["none"] }
+    },
+    "LMT": {
+        "label": ["Logistic Model Trees"],
+        "library": ["RWeka"],
+        "type": ["Classification"],
+        "tags": ["Model Tree", "Implicit Feature Selection", "Logistic Regression", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["iter"], "class": ["numeric"], "label": ["# Iteratons"] }
+    },
+    "loclda": {
+        "label": ["Localized Linear Discriminant Analysis"],
+        "library": ["klaR"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["k"], "class": ["numeric"], "label": ["#Nearest Neighbors"] }
+    },
+    "logicBag": {
+        "label": ["Bagged Logic Regression"],
+        "library": ["logicFS"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Logic Regression",
+            "Linear Classifier",
+            "Linear Regression",
+            "Logistic Regression",
+            "Bagging",
+            "Ensemble Model",
+            "Two Class Only",
+            "Binary Predictors Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["nleaves", "ntrees"],
+            "class": ["numeric", "numeric"],
+            "label": ["Maximum Number of Leaves", "Number of Trees"]
+        }
+    },
+    "LogitBoost": {
+        "label": ["Boosted Logistic Regression"],
+        "library": ["caTools"],
+        "type": ["Classification"],
+        "tags": ["Ensemble Model", "Boosting", "Implicit Feature Selection", "Tree-Based Model", "Logistic Regression"],
+
+        "tuning_parameters": { "parameter": ["nIter"], "class": ["numeric"], "label": ["# Boosting Iterations"] }
+    },
+    "logreg": {
+        "label": ["Logic Regression"],
+        "library": ["LogicReg"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Logic Regression",
+            "Linear Classifier",
+            "Linear Regression",
+            "Logistic Regression",
+            "Two Class Only",
+            "Binary Predictors Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["treesize", "ntrees"],
+            "class": ["numeric", "numeric"],
+            "label": ["Maximum Number of Leaves", "Number of Trees"]
+        }
+    },
+    "manb": {
+        "label": ["Model Averaged Naive Bayes Classifier"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": {
+            "parameter": ["smooth", "prior"],
+            "class": ["numeric", "numeric"],
+            "label": ["Smoothing Parameter", "Prior Probability"]
+        }
+    },
+    "mda": {
+        "label": ["Mixture Discriminant Analysis"],
+        "library": ["mda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Mixture Model"],
+
+        "tuning_parameters": { "parameter": ["subclasses"], "class": ["numeric"], "label": ["#Subclasses Per Class"] }
+    },
+    "mlp": {
+        "label": ["Multi-Layer Perceptron"],
+        "library": ["RSNNS"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network"],
+
+        "tuning_parameters": { "parameter": ["size"], "class": ["numeric"], "label": ["#Hidden Units"] }
+    },
+    "mlpKerasDecay": {
+        "label": ["Multilayer Perceptron Network with Weight Decay"],
+        "library": ["keras"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network", "L2 Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "lambda", "batch_size", "lr", "rho", "decay", "activation"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "character"],
+            "label": [
+                "#Hidden Units",
+                "L2 Regularization",
+                "Batch Size",
+                "Learning Rate",
+                "Rho",
+                "Learning Rate Decay",
+                "Activation Function"
+            ]
+        }
+    },
+    "mlpKerasDecayCost": {
+        "label": ["Multilayer Perceptron Network with Weight Decay"],
+        "library": ["keras"],
+        "type": ["Classification"],
+        "tags": ["Neural Network", "L2 Regularization", "Cost Sensitive Learning", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "lambda", "batch_size", "lr", "rho", "decay", "cost", "activation"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "character"],
+            "label": [
+                "#Hidden Units",
+                "L2 Regularization",
+                "Batch Size",
+                "Learning Rate",
+                "Rho",
+                "Learning Rate Decay",
+                "Cost",
+                "Activation Function"
+            ]
+        }
+    },
+    "mlpKerasDropout": {
+        "label": ["Multilayer Perceptron Network with Dropout"],
+        "library": ["keras"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "dropout", "batch_size", "lr", "rho", "decay", "activation"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "character"],
+            "label": [
+                "#Hidden Units",
+                "Dropout Rate",
+                "Batch Size",
+                "Learning Rate",
+                "Rho",
+                "Learning Rate Decay",
+                "Activation Function"
+            ]
+        }
+    },
+    "mlpKerasDropoutCost": {
+        "label": ["Multilayer Perceptron Network with Dropout"],
+        "library": ["keras"],
+        "type": ["Classification"],
+        "tags": ["Neural Network", "Cost Sensitive Learning", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "dropout", "batch_size", "lr", "rho", "decay", "cost", "activation"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "character"],
+            "label": [
+                "#Hidden Units",
+                "Dropout Rate",
+                "Batch Size",
+                "Learning Rate",
+                "Rho",
+                "Learning Rate Decay",
+                "Cost",
+                "Activation Function"
+            ]
+        }
+    },
+    "mlpML": {
+        "label": ["Multi-Layer Perceptron, with multiple layers"],
+        "library": ["RSNNS"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network"],
+
+        "tuning_parameters": {
+            "parameter": ["layer1", "layer2", "layer3"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["#Hidden Units layer1", "#Hidden Units layer2", "#Hidden Units layer3"]
+        }
+    },
+    "mlpSGD": {
+        "label": ["Multilayer Perceptron Network by Stochastic Gradient Descent"],
+        "library": ["FCNN4R", "plyr"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network", "L2 Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "l2reg", "lambda", "learn_rate", "momentum", "gamma", "minibatchsz", "repeats"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"],
+            "label": [
+                "#Hidden Units",
+                "L2 Regularization",
+                "RMSE Gradient Scaling",
+                "Learning Rate",
+                "Momentum",
+                "Learning Rate Decay",
+                "Batch Size",
+                "#Models"
+            ]
+        }
+    },
+    "mlpWeightDecay": {
+        "label": ["Multi-Layer Perceptron"],
+        "library": ["RSNNS"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network", "L2 Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "decay"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Hidden Units", "Weight Decay"]
+        }
+    },
+    "mlpWeightDecayML": {
+        "label": ["Multi-Layer Perceptron, multiple layers"],
+        "library": ["RSNNS"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network", "L2 Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["layer1", "layer2", "layer3", "decay"],
+            "class": ["numeric", "numeric", "numeric", "numeric"],
+            "label": ["#Hidden Units layer1", "#Hidden Units layer2", "#Hidden Units layer3", "Weight Decay"]
+        }
+    },
+    "monmlp": {
+        "label": ["Monotone Multi-Layer Perceptron Neural Network"],
+        "library": ["monmlp"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network"],
+
+        "tuning_parameters": {
+            "parameter": ["hidden1", "n.ensemble"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Hidden Units", "#Models"]
+        }
+    },
+    "msaenet": {
+        "label": ["Multi-Step Adaptive MCP-Net"],
+        "library": ["msaenet"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Implicit Feature Selection",
+            "L1 Regularization",
+            "L2 Regularization",
+            "Linear Classifier",
+            "Linear Regression"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["alphas", "nsteps", "scale"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["Alpha", "#Adaptive Estimation Steps", "Adaptive Weight Scaling Factor"]
+        }
+    },
+    "multinom": {
+        "label": ["Penalized Multinomial Regression"],
+        "library": ["nnet"],
+        "type": ["Classification"],
+        "tags": [
+            "Neural Network",
+            "L2 Regularization",
+            "Logistic Regression",
+            "Linear Classifier",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["decay"], "class": ["numeric"], "label": ["Weight Decay"] }
+    },
+    "naive_bayes": {
+        "label": ["Naive Bayes"],
+        "library": ["naivebayes"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model"],
+
+        "tuning_parameters": {
+            "parameter": ["laplace", "usekernel", "adjust"],
+            "class": ["numeric", "logical", "numeric"],
+            "label": ["Laplace Correction", "Distribution Type", "Bandwidth Adjustment"]
+        }
+    },
+    "nb": {
+        "label": ["Naive Bayes"],
+        "library": ["klaR"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model"],
+
+        "tuning_parameters": {
+            "parameter": ["fL", "usekernel", "adjust"],
+            "class": ["numeric", "logical", "numeric"],
+            "label": ["Laplace Correction", "Distribution Type", "Bandwidth Adjustment"]
+        }
+    },
+    "nbDiscrete": {
+        "label": ["Naive Bayes Classifier"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": { "parameter": ["smooth"], "class": ["numeric"], "label": ["Smoothing Parameter"] }
+    },
+    "nbSearch": {
+        "label": ["Semi-Naive Structure Learner Wrapper"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": {
+            "parameter": ["k", "epsilon", "smooth", "final_smooth", "direction"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "character"],
+            "label": [
+                "#Folds",
+                "Minimum Absolute Improvement",
+                "Smoothing Parameter",
+                "Final Smoothing Parameter",
+                "Search Direction"
+            ]
+        }
+    },
+    "nnet": {
+        "label": ["Neural Network"],
+        "library": ["nnet"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network", "L2 Regularization", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "decay"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Hidden Units", "Weight Decay"]
+        }
+    },
+    "nodeHarvest": {
+        "label": ["Tree-Based Ensembles"],
+        "library": ["nodeHarvest"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Implicit Feature Selection", "Ensemble Model", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["maxinter", "mode"],
+            "class": ["numeric", "character"],
+            "label": ["Maximum Interaction Depth", "Prediction Mode"]
+        }
+    },
+    "OneR": {
+        "label": ["Single Rule Classification"],
+        "library": ["RWeka"],
+        "type": ["Classification"],
+        "tags": ["Rule-Based Model", "Implicit Feature Selection"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["none"] }
+    },
+    "ordinalNet": {
+        "label": ["Penalized Ordinal Regression"],
+        "library": ["ordinalNet", "plyr"],
+        "type": ["Classification"],
+        "tags": [
+            "Generalized Linear Model",
+            "Implicit Feature Selection",
+            "L1 Regularization",
+            "L2 Regularization",
+            "Linear Classifier",
+            "Linear Regression",
+            "Ordinal Outcomes"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["alpha", "criteria", "link"],
+            "class": ["numeric", "character", "character"],
+            "label": ["Mixing Percentage", "Selection Criterion", "Link Function"]
+        }
+    },
+    "ORFlog": {
+        "label": ["Oblique Random Forest"],
+        "library": ["obliqueRF"],
+        "type": ["Classification"],
+        "tags": [
+            "Random Forest",
+            "Oblique Tree",
+            "Logistic Regression",
+            "Implicit Feature Selection",
+            "Ensemble Model",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "ORFpls": {
+        "label": ["Oblique Random Forest"],
+        "library": ["obliqueRF"],
+        "type": ["Classification"],
+        "tags": [
+            "Random Forest",
+            "Oblique Tree",
+            "Partial Least Squares",
+            "Implicit Feature Selection",
+            "Ensemble Model",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "ORFridge": {
+        "label": ["Oblique Random Forest"],
+        "library": ["obliqueRF"],
+        "type": ["Classification"],
+        "tags": [
+            "Random Forest",
+            "Oblique Tree",
+            "Ridge Regression",
+            "Implicit Feature Selection",
+            "Ensemble Model",
+            "Two Class Only",
+            "L2 Regularization"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "ORFsvm": {
+        "label": ["Oblique Random Forest"],
+        "library": ["obliqueRF"],
+        "type": ["Classification"],
+        "tags": [
+            "Random Forest",
+            "Oblique Tree",
+            "Kernel Method",
+            "Implicit Feature Selection",
+            "Ensemble Model",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "pam": {
+        "label": ["Nearest Shrunken Centroids"],
+        "library": ["pamr"],
+        "type": ["Classification"],
+        "tags": ["Prototype Models", "Implicit Feature Selection", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["threshold"], "class": ["numeric"], "label": ["Shrinkage Threshold"] }
+    },
+    "parRF": {
+        "label": ["Parallel Random Forest"],
+        "library": ["e1071", "randomForest", "foreach", "import"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "PART": {
+        "label": ["Rule-Based Classifier"],
+        "library": ["RWeka"],
+        "type": ["Classification"],
+        "tags": ["Rule-Based Model", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["threshold", "pruned"],
+            "class": ["numeric", "character"],
+            "label": ["Confidence Threshold", "Pruning"]
+        }
+    },
+    "pcaNNet": {
+        "label": ["Neural Networks with Feature Extraction"],
+        "library": ["nnet"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network", "Feature Extraction", "L2 Regularization", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["size", "decay"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Hidden Units", "Weight Decay"]
+        }
+    },
+    "pda": {
+        "label": ["Penalized Discriminant Analysis"],
+        "library": ["mda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["lambda"],
+            "class": ["numeric"],
+            "label": ["Shrinkage Penalty Coefficient"]
+        }
+    },
+    "pda2": {
+        "label": ["Penalized Discriminant Analysis"],
+        "library": ["mda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model", "Accepts Case Weights"],
+
+        "tuning_parameters": { "parameter": ["df"], "class": ["numeric"], "label": ["Degrees of Freedom"] }
+    },
+    "plr": {
+        "label": ["Penalized Logistic Regression"],
+        "library": ["stepPlr"],
+        "type": ["Classification"],
+        "tags": ["L2 Regularization", "Logistic Regression", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "cp"],
+            "class": ["numeric", "character"],
+            "label": ["L2 Penalty", "Complexity Parameter"]
+        }
+    },
+    "pls": {
+        "label": ["Partial Least Squares"],
+        "library": ["pls"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Partial Least Squares", "Feature Extraction", "Linear Classifier", "Linear Regression"],
+
+        "tuning_parameters": { "parameter": ["ncomp"], "class": ["numeric"], "label": ["#Components"] }
+    },
+    "plsRglm": {
+        "label": ["Partial Least Squares Generalized Linear Models "],
+        "library": ["plsRglm"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Generalized Linear Models", "Partial Least Squares", "Two Class Only"],
+
+        "tuning_parameters": {
+            "parameter": ["nt", "alpha.pvals.expli"],
+            "class": ["numeric", "numeric"],
+            "label": ["#PLS Components", "p-Value threshold"]
+        }
+    },
+    "polr": {
+        "label": ["Ordered Logistic or Probit Regression"],
+        "library": ["MASS"],
+        "type": ["Classification"],
+        "tags": ["Logistic Regression", "Linear Classifier", "Accepts Case Weights", "Ordinal Outcomes"],
+
+        "tuning_parameters": { "parameter": ["method"], "class": ["character"], "label": ["parameter"] }
+    },
+    "PRIM": {
+        "label": ["Patient Rule Induction Method"],
+        "library": ["supervisedPRIM"],
+        "type": ["Classification"],
+        "tags": ["Rule-Based Model", "Patient Rule Induction Method"],
+
+        "tuning_parameters": {
+            "parameter": ["peel.alpha", "paste.alpha", "mass.min"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["peeling quantile", "pasting quantile", "minimum mass"]
+        }
+    },
+    "qda": {
+        "label": ["Quadratic Discriminant Analysis"],
+        "library": ["MASS"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "QdaCov": {
+        "label": ["Robust Quadratic Discriminant Analysis"],
+        "library": ["rrcov"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "randomGLM": {
+        "label": ["Ensembles of Generalized Linear Models"],
+        "library": ["randomGLM"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Generalized Linear Model", "Linear Classifier", "Ensemble Model", "Bagging"],
+
+        "tuning_parameters": {
+            "parameter": ["maxInteractionOrder"],
+            "class": ["numeric"],
+            "label": ["Interaction Order"]
+        }
+    },
+    "ranger": {
+        "label": ["Random Forest"],
+        "library": ["e1071", "ranger", "dplyr"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection", "Accepts Case Weights"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry", "splitrule", "min.node.size"],
+            "class": ["numeric", "character", "numeric"],
+            "label": ["#Randomly Selected Predictors", "Splitting Rule", "Minimal Node Size"]
+        }
+    },
+    "rbf": {
+        "label": ["Radial Basis Function Network"],
+        "library": ["RSNNS"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Neural Network", "L2 Regularization", "Radial Basis Function"],
+
+        "tuning_parameters": { "parameter": ["size"], "class": ["numeric"], "label": ["#Hidden Units"] }
+    },
+    "rbfDDA": {
+        "label": ["Radial Basis Function Network"],
+        "library": ["RSNNS"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Neural Network", "L2 Regularization", "Radial Basis Function"],
+
+        "tuning_parameters": {
+            "parameter": ["negativeThreshold"],
+            "class": ["numeric"],
+            "label": ["Activation Limit for Conflicting Classes"]
+        }
+    },
+    "Rborist": {
+        "label": ["Random Forest"],
+        "library": ["Rborist"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["predFixed", "minNode"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Randomly Selected Predictors", "Minimal Node Size"]
+        }
+    },
+    "rda": {
+        "label": ["Regularized Discriminant Analysis"],
+        "library": ["klaR"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model", "Regularization", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["gamma", "lambda"],
+            "class": ["numeric", "numeric"],
+            "label": ["Gamma", "Lambda"]
+        }
+    },
+    "regLogistic": {
+        "label": ["Regularized Logistic Regression"],
+        "library": ["LiblineaR"],
+        "type": ["Classification"],
+        "tags": ["Linear Classifier", "Robust Methods", "L1 Regularization", "L2 Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["cost", "loss", "epsilon"],
+            "class": ["numeric", "character", "numeric"],
+            "label": ["Cost", "Loss Function", "Tolerance"]
+        }
+    },
+    "rf": {
+        "label": ["Random Forest"],
+        "library": ["randomForest"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "rlda": {
+        "label": ["Regularized Linear Discriminant Analysis"],
+        "library": ["sparsediscrim"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Polynomial Model", "Regularization", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["estimator"], "class": ["character"], "label": ["Regularization Method"] }
+    },
+    "rmda": {
+        "label": ["Robust Mixture Discriminant Analysis"],
+        "library": ["robustDA"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Mixture Model", "Robust Methods"],
+
+        "tuning_parameters": {
+            "parameter": ["K", "model"],
+            "class": ["numeric", "character"],
+            "label": ["#Subclasses Per Class", "Model"]
+        }
+    },
+    "rotationForest": {
+        "label": ["Rotation Forest"],
+        "library": ["rotationForest"],
+        "type": ["Classification"],
+        "tags": [
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Feature Extraction Models",
+            "Tree-Based Model",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["K", "L"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Variable Subsets", "Ensemble Size"]
+        }
+    },
+    "rotationForestCp": {
+        "label": ["Rotation Forest"],
+        "library": ["rpart", "plyr", "rotationForest"],
+        "type": ["Classification"],
+        "tags": [
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Feature Extraction Models",
+            "Tree-Based Model",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["K", "L", "cp"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["#Variable Subsets", "Ensemble Size", "Complexity Parameter"]
+        }
+    },
+    "rpart": {
+        "label": ["CART"],
+        "library": ["rpart"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["cp"], "class": ["numeric"], "label": ["Complexity Parameter"] }
+    },
+    "rpart1SE": {
+        "label": ["CART"],
+        "library": ["rpart"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "rpart2": {
+        "label": ["CART"],
+        "library": ["rpart"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Implicit Feature Selection",
+            "Handle Missing Predictor Data",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": { "parameter": ["maxdepth"], "class": ["numeric"], "label": ["Max Tree Depth"] }
+    },
+    "RRF": {
+        "label": ["Regularized Random Forest"],
+        "library": ["randomForest", "RRF"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection", "Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry", "coefReg", "coefImp"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["#Randomly Selected Predictors", "Regularization Value", "Importance Coefficient"]
+        }
+    },
+    "RRFglobal": {
+        "label": ["Regularized Random Forest"],
+        "library": ["RRF"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection", "Regularization"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry", "coefReg"],
+            "class": ["numeric", "numeric"],
+            "label": ["#Randomly Selected Predictors", "Regularization Value"]
+        }
+    },
+    "rrlda": {
+        "label": ["Robust Regularized Linear Discriminant Analysis"],
+        "library": ["rrlda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Robust Model", "Regularization", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "hp", "penalty"],
+            "class": ["numeric", "numeric", "character"],
+            "label": ["Penalty Parameter", "Robustness Parameter", "Penalty Type"]
+        }
+    },
+    "sda": {
+        "label": ["Shrinkage Discriminant Analysis"],
+        "library": ["sda"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Regularization", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["diagonal", "lambda"],
+            "class": ["logical", "numeric"],
+            "label": ["Diagonalize", "shrinkage"]
+        }
+    },
+    "sdwd": {
+        "label": ["Sparse Distance Weighted Discrimination"],
+        "library": ["sdwd"],
+        "type": ["Classification"],
+        "tags": [
+            "Discriminant Analysis Models",
+            "Implicit Feature Selection",
+            "L1 Regularization",
+            "L2 Regularization",
+            "Linear Classifier",
+            "Distance Weighted Discrimination"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "lambda2"],
+            "class": ["numeric", "numeric"],
+            "label": ["L1 Penalty", "L2 Penalty"]
+        }
+    },
+    "simpls": {
+        "label": ["Partial Least Squares"],
+        "library": ["pls"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Partial Least Squares", "Feature Extraction", "Linear Classifier", "Linear Regression"],
+
+        "tuning_parameters": { "parameter": ["ncomp"], "class": ["numeric"], "label": ["#Components"] }
+    },
+    "slda": {
+        "label": ["Stabilized Linear Discriminant Analysis"],
+        "library": ["ipred"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Linear Classifier"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["none"] }
+    },
+    "sparseLDA": {
+        "label": ["Sparse Linear Discriminant Analysis"],
+        "library": ["sparseLDA"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "L1 Regularization", "Implicit Feature Selection", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["NumVars", "lambda"],
+            "class": ["numeric", "numeric"],
+            "label": ["# Predictors", "Lambda"]
+        }
+    },
+    "spls": {
+        "label": ["Sparse Partial Least Squares"],
+        "library": ["spls"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Partial Least Squares",
+            "Feature Extraction",
+            "Linear Classifier",
+            "Linear Regression",
+            "L1 Regularization"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["K", "eta", "kappa"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["#Components", "Threshold", "Kappa"]
+        }
+    },
+    "stepLDA": {
+        "label": ["Linear Discriminant Analysis with Stepwise Feature Selection"],
+        "library": ["klaR", "MASS"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Feature Selection Wrapper", "Linear Classifier"],
+
+        "tuning_parameters": {
+            "parameter": ["maxvar", "direction"],
+            "class": ["numeric", "character"],
+            "label": ["Maximum #Variables", "Search Direction"]
+        }
+    },
+    "stepQDA": {
+        "label": ["Quadratic Discriminant Analysis with Stepwise Feature Selection"],
+        "library": ["klaR", "MASS"],
+        "type": ["Classification"],
+        "tags": ["Discriminant Analysis", "Feature Selection Wrapper", "Polynomial Model"],
+
+        "tuning_parameters": {
+            "parameter": ["maxvar", "direction"],
+            "class": ["numeric", "character"],
+            "label": ["Maximum #Variables", "Search Direction"]
+        }
+    },
+    "svmBoundrangeString": {
+        "label": ["Support Vector Machines with Boundrange String Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "String Kernel", "Robust Methods", "Text Mining"],
+
+        "tuning_parameters": {
+            "parameter": ["length", "C"],
+            "class": ["numeric", "numeric"],
+            "label": ["length", "Cost"]
+        }
+    },
+    "svmExpoString": {
+        "label": ["Support Vector Machines with Exponential String Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "String Kernel", "Robust Methods", "Text Mining"],
+
+        "tuning_parameters": {
+            "parameter": ["lambda", "C"],
+            "class": ["numeric", "numeric"],
+            "label": ["lambda", "Cost"]
+        }
+    },
+    "svmLinear": {
+        "label": ["Support Vector Machines with Linear Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Kernel Method",
+            "Support Vector Machines",
+            "Linear Regression",
+            "Linear Classifier",
+            "Robust Methods"
+        ],
+
+        "tuning_parameters": { "parameter": ["C"], "class": ["numeric"], "label": ["Cost"] }
+    },
+    "svmLinear2": {
+        "label": ["Support Vector Machines with Linear Kernel"],
+        "library": ["e1071"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Kernel Method",
+            "Support Vector Machines",
+            "Linear Regression",
+            "Linear Classifier",
+            "Robust Methods"
+        ],
+
+        "tuning_parameters": { "parameter": ["cost"], "class": ["numeric"], "label": ["Cost"] }
+    },
+    "svmLinearWeights": {
+        "label": ["Linear Support Vector Machines with Class Weights"],
+        "library": ["e1071"],
+        "type": ["Classification"],
+        "tags": [
+            "Kernel Method",
+            "Support Vector Machines",
+            "Linear Classifier",
+            "Robust Methods",
+            "Cost Sensitive Learning",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["cost", "weight"],
+            "class": ["numeric", "numeric"],
+            "label": ["Cost", "Class Weight"]
+        }
+    },
+    "svmPoly": {
+        "label": ["Support Vector Machines with Polynomial Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "Polynomial Model", "Robust Methods"],
+
+        "tuning_parameters": {
+            "parameter": ["degree", "scale", "C"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["Polynomial Degree", "Scale", "Cost"]
+        }
+    },
+    "svmRadial": {
+        "label": ["Support Vector Machines with Radial Basis Function Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "Radial Basis Function", "Robust Methods"],
+
+        "tuning_parameters": {
+            "parameter": ["sigma", "C"],
+            "class": ["numeric", "numeric"],
+            "label": ["Sigma", "Cost"]
+        }
+    },
+    "svmRadialCost": {
+        "label": ["Support Vector Machines with Radial Basis Function Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "Radial Basis Function"],
+
+        "tuning_parameters": { "parameter": ["C"], "class": ["numeric"], "label": ["Cost"] }
+    },
+    "svmRadialSigma": {
+        "label": ["Support Vector Machines with Radial Basis Function Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "Radial Basis Function", "Robust Methods"],
+
+        "tuning_parameters": {
+            "parameter": ["sigma", "C"],
+            "class": ["numeric", "numeric"],
+            "label": ["Sigma", "Cost"]
+        }
+    },
+    "svmRadialWeights": {
+        "label": ["Support Vector Machines with Class Weights"],
+        "library": ["kernlab"],
+        "type": ["Classification"],
+        "tags": [
+            "Kernel Method",
+            "Support Vector Machines",
+            "Radial Basis Function",
+            "Cost Sensitive Learning",
+            "Two Class Only"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["sigma", "C", "Weight"],
+            "class": ["numeric", "numeric", "numeric"],
+            "label": ["Sigma", "Cost", "Weight"]
+        }
+    },
+    "svmSpectrumString": {
+        "label": ["Support Vector Machines with Spectrum String Kernel"],
+        "library": ["kernlab"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Kernel Method", "Support Vector Machines", "String Kernel", "Robust Methods", "Text Mining"],
+
+        "tuning_parameters": {
+            "parameter": ["length", "C"],
+            "class": ["numeric", "numeric"],
+            "label": ["length", "Cost"]
+        }
+    },
+    "tan": {
+        "label": ["Tree Augmented Naive Bayes Classifier"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": {
+            "parameter": ["score", "smooth"],
+            "class": ["character", "numeric"],
+            "label": ["Score Function", "Smoothing Parameter"]
+        }
+    },
+    "tanSearch": {
+        "label": ["Tree Augmented Naive Bayes Classifier Structure Learner Wrapper"],
+        "library": ["bnclassify"],
+        "type": ["Classification"],
+        "tags": ["Bayesian Model", "Categorical Predictors Only"],
+
+        "tuning_parameters": {
+            "parameter": ["k", "epsilon", "smooth", "final_smooth", "sp"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "logical"],
+            "label": [
+                "#Folds",
+                "Minimum Absolute Improvement",
+                "Smoothing Parameter",
+                "Final Smoothing Parameter",
+                "Super-Parent"
+            ]
+        }
+    },
+    "treebag": {
+        "label": ["Bagged CART"],
+        "library": ["ipred", "plyr", "e1071"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Tree-Based Model", "Ensemble Model", "Bagging", "Accepts Case Weights"],
+
+        "tuning_parameters": { "parameter": ["parameter"], "class": ["character"], "label": ["parameter"] }
+    },
+    "vbmpRadial": {
+        "label": ["Variational Bayesian Multinomial Probit Regression"],
+        "library": ["vbmp"],
+        "type": ["Classification"],
+        "tags": ["Gaussian Process", "Bayesian Model", "Radial Basis Function"],
+
+        "tuning_parameters": { "parameter": ["estimateTheta"], "class": ["character"], "label": ["Theta Estimated"] }
+    },
+    "vglmAdjCat": {
+        "label": ["Adjacent Categories Probability Model for Ordinal Data"],
+        "library": ["VGAM"],
+        "type": ["Classification"],
+        "tags": ["Logistic Regression", "Linear Classifier", "Accepts Case Weights", "Ordinal Outcomes"],
+
+        "tuning_parameters": {
+            "parameter": ["parallel", "link"],
+            "class": ["logical", "character"],
+            "label": ["Parallel Curves", "Link Function"]
+        }
+    },
+    "vglmContRatio": {
+        "label": ["Continuation Ratio Model for Ordinal Data"],
+        "library": ["VGAM"],
+        "type": ["Classification"],
+        "tags": ["Logistic Regression", "Linear Classifier", "Accepts Case Weights", "Ordinal Outcomes"],
+
+        "tuning_parameters": {
+            "parameter": ["parallel", "link"],
+            "class": ["logical", "character"],
+            "label": ["Parallel Curves", "Link Function"]
+        }
+    },
+    "vglmCumulative": {
+        "label": ["Cumulative Probability Model for Ordinal Data"],
+        "library": ["VGAM"],
+        "type": ["Classification"],
+        "tags": ["Logistic Regression", "Linear Classifier", "Accepts Case Weights", "Ordinal Outcomes"],
+
+        "tuning_parameters": {
+            "parameter": ["parallel", "link"],
+            "class": ["logical", "character"],
+            "label": ["Parallel Curves", "Link Function"]
+        }
+    },
+    "widekernelpls": {
+        "label": ["Partial Least Squares"],
+        "library": ["pls"],
+        "type": ["Regression", "Classification"],
+        "tags": ["Partial Least Squares", "Feature Extraction", "Linear Classifier", "Linear Regression"],
+
+        "tuning_parameters": { "parameter": ["ncomp"], "class": ["numeric"], "label": ["#Components"] }
+    },
+    "wsrf": {
+        "label": ["Weighted Subspace Random Forest"],
+        "library": ["wsrf"],
+        "type": ["Classification"],
+        "tags": ["Random Forest", "Ensemble Model", "Bagging", "Implicit Feature Selection"],
+
+        "tuning_parameters": {
+            "parameter": ["mtry"],
+            "class": ["numeric"],
+            "label": ["#Randomly Selected Predictors"]
+        }
+    },
+    "xgbDART": {
+        "label": ["eXtreme Gradient Boosting"],
+        "library": ["xgboost", "plyr"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Boosting",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": [
+                "nrounds",
+                "max_depth",
+                "eta",
+                "gamma",
+                "subsample",
+                "colsample_bytree",
+                "rate_drop",
+                "skip_drop",
+                "min_child_weight"
+            ],
+            "class": [
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric",
+                "numeric"
+            ],
+            "label": [
+                "# Boosting Iterations",
+                "Max Tree Depth",
+                "Shrinkage",
+                "Minimum Loss Reduction",
+                "Subsample Percentage",
+                "Subsample Ratio of Columns",
+                "Fraction of Trees Dropped",
+                "Prob. of Skipping Drop-out",
+                "Minimum Sum of Instance Weight"
+            ]
+        }
+    },
+    "xgbLinear": {
+        "label": ["eXtreme Gradient Boosting"],
+        "library": ["xgboost"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Linear Classifier Models",
+            "Linear Regression Models",
+            "L1 Regularization Models",
+            "L2 Regularization Models",
+            "Boosting",
+            "Ensemble Model",
+            "Implicit Feature Selection"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["nrounds", "lambda", "alpha", "eta"],
+            "class": ["numeric", "numeric", "numeric", "numeric"],
+            "label": ["# Boosting Iterations", "L2 Regularization", "L1 Regularization", "Learning Rate"]
+        }
+    },
+    "xgbTree": {
+        "label": ["eXtreme Gradient Boosting"],
+        "library": ["xgboost", "plyr"],
+        "type": ["Regression", "Classification"],
+        "tags": [
+            "Tree-Based Model",
+            "Boosting",
+            "Ensemble Model",
+            "Implicit Feature Selection",
+            "Accepts Case Weights"
+        ],
+
+        "tuning_parameters": {
+            "parameter": ["nrounds", "max_depth", "eta", "gamma", "colsample_bytree", "min_child_weight", "subsample"],
+            "class": ["numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"],
+            "label": [
+                "# Boosting Iterations",
+                "Max Tree Depth",
+                "Shrinkage",
+                "Minimum Loss Reduction",
+                "Subsample Ratio of Columns",
+                "Minimum Sum of Instance Weight",
+                "Subsample Percentage"
+            ]
+        }
+    },
+    "xyf": {
+        "label": ["Self-Organizing Maps"],
+        "library": ["kohonen"],
+        "type": ["Classification", "Regression"],
+        "tags": ["Self-Organising Maps"],
+
+        "tuning_parameters": {
+            "parameter": ["xdim", "ydim", "user.weights", "topo"],
+            "class": ["numeric", "numeric", "numeric", "character"],
+            "label": ["Rows", "Columns", "Layer Weight", "Topology"]
+        }
+    }
+}
