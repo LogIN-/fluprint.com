@@ -2,15 +2,15 @@
     <nav id="sidebar">
         <div class="sidebar-header">
             <h3 style="padding: 0;margin: 0;text-align: center;">
-                <router-link to="exploratory?page=edge" style="font-size: 40px;line-height: 40px;">fluprint</router-link>
+                <router-link to="about" style="font-size: 40px;line-height: 40px;">fluprint</router-link>
             </h3>
         </div>
 
         <ul class="list-unstyled components">
             <li class="active">
-                <!-- <router-link to="exploratory?page=edge">Exploratory analysis</router-link> -->
                 <router-link to="about">About</router-link>
                 <router-link to="database">Database</router-link>
+                <router-link to="exploratory?page=edge">SIMON exploratory</router-link>
             </li>
             <!--
                 <li>
@@ -36,14 +36,19 @@
         <ul class="list-unstyled components">
             <p>other:</p>
             <li>
-                <a href="https://github.com/LogIN-/fluprint" class="article" target="_blank">@fluprint</a>
+                <a title="Powerful, flexible, open-source and easy to use knowledge discovery application" href="https://github.com/genular/simon-frontend" class="article" target="_blank">@SIMON</a>
             </li>
             <li>
-                <a href="https://github.com/LogIN-/mulset" class="article" target="_blank">@mulset</a>
+                <a title="open source fluprint database" href="https://github.com/LogIN-/fluprint" class="article" target="_blank">@fluprint</a>
+            </li>
+            <li>
+                <a title="calculate intersections with ease" href="https://github.com/LogIN-/mulset" class="article" target="_blank">@mulset</a>
             </li>
         </ul>
 
-        <div class="bottom-nav" title="SIMON Says..."></div>
+        <a title="follow me on twitter" href="https://twitter.com/TomicAdriana" class="article" target="_blank">
+            <div class="bottom-nav" title="SIMON Says..."></div>
+        </a>
     </nav>
 </template>
 <script>

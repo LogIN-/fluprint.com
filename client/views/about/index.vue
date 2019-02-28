@@ -30,6 +30,18 @@
                 </div>
             </section>
 
+            <section>
+                <div class="heading">The tool</div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <img class="img-fluid" src="about/section_3.png">
+                    </div>
+                    <div class="col-sm-8 description">
+                        To identify cellular biomarkers that can predict antibody responses to inactivated influenza vaccine, we developed a tool to automate machine learning process - SIMON - Sequential Iterative Modelling “OverNight”. SIMON is a fully automated binary classifier that utilizes 128 different machine learning algorithms to select relevant and informative features. Such an iterative approach facilitated data reduction and improved overall performance, ultimately increasing the predictive accuracy.   Preprint available <a title="SIMON, an automated machine learning system reveals immune signatures of influenza vaccine responses" href="https://www.biorxiv.org/content/10.1101/545186v1" class="article" target="_blank">@BioRxiv</a>.
+                    </div>
+                </div>
+            </section>
+
             <div class="sponsors">
                 This work is supported by the EU’s Horizon 2020 research and innovation program under the Marie Sklodowska-Curie<br />
                 Grant (FluPRINT, Project No 796636)<br />

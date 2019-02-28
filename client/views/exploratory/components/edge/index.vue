@@ -1,25 +1,65 @@
 <template>
-    <div class="container-fluid d3graph-container">
-        <div class="progress" style="margin-left: 15px;margin-right: 15px;margin-bottom: 25px;" v-if="loading">
-            <div class="progress-bar progress-bar-striped progress-bar-animated  bg-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-        </div>
-        <div class="col-md-3" style="float: left; text-align: left;">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="font-weight: bold; font-size: 22px;">Selected Node:</div>
-                <div class="panel-body">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            <span v-if="highlightedNode">{{highlightedNode.data.text}}</span>
-                            <span v-else>Nothing selected</span>
+    <div class="container-fluid">
+        <div class="row d3graph-container">
+            <div class="progress" style="margin-left: 15px;margin-right: 15px;margin-bottom: 25px;" v-if="loading">
+                <div
+                    class="progress-bar progress-bar-striped progress-bar-animated  bg-info"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 100%"
+                ></div>
+            </div>
+            <div class="col-sm-3" style="float: left; text-align: left;">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="font-weight: bold; font-size: 22px;">Selected Node:</div>
+                    <div class="panel-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <span v-if="highlightedNode">{{ highlightedNode.data.text }}</span>
+                                <span v-else>Nothing selected</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <event-logger :details="selectedItemChunks" />
             </div>
-            <event-logger :details="selectedItemChunks" />
-        </div>
 
-        <div class="col-md-9 panel panel-default" style="float: right;">
-            <hierarchical-edge-bundling class="graph-root" ref="graph" :maxTextWidth="75" identifier="text" :duration="duration" @mouseNodeClick="mouseNodeClick" @mouseNodeOver="mouseNodeOver" @mouseNodeOut="mouseNodeOut" :data="tree" node-text="text" :margin-x="marginX" :margin-y="marginY" />
+            <div class="col-sm-9 panel panel-default" style="float: right;">
+                <hierarchical-edge-bundling
+                    class="graph-root"
+                    ref="graph"
+                    :maxTextWidth="85"
+                    identifier="key"
+                    :duration="duration"
+                    @mouseNodeClick="mouseNodeClick"
+                    @mouseNodeOver="mouseNodeOver"
+                    @mouseNodeOut="mouseNodeOut"
+                    :data="tree"
+                    node-text="text"
+                    :margin-x="marginX"
+                    :margin-y="marginY"
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="boxes">
+                <section>
+                    <div class="heading">Exploratory analysis</div>
+                    <div class="row block">
+                        <div class="col-sm-12 description">
+                            SIMON successfully processed several models able to discriminate high and low influenza vaccine responders. In total, 127 features were selected across
+                            two datasets in models built with training and test AUROC≥0.7 and specificity/sensitivity>0.5. To further narrow down exploratory analysis and identify
+                            features of interest, we ordered features selected in models based on their variable importance score. The variable importance score is a measurement of
+                            the contribution of each feature to the model. This allowed us to explore in how many datasets and in how many different models, same features were
+                            selected and with which variable importance score. For example, the first feature CD27+ CD8+ T cells had the highest variable importance score in 5
+                            different machine learning algorithms in both datasets, indicating that this feature contributes to the discrimination of the high and low responders
+                            with high accuracy and reproducibility.
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </template>
@@ -64,10 +104,13 @@ export default {
                 .then(jsonData => {
                     this.loading = false;
                     this.tree = jsonData;
+
+                    this.preselectFirstItem();
                 });
         }
     },
     methods: {
+        preselectFirstItem() {},
         itemToStructure(selected, data) {
             const selectedChunks = selected.split(".");
             this.selectedItemChunks = {
@@ -100,6 +143,8 @@ export default {
             });
         },
         mouseNodeClick(event) {
+            console.log(event.element);
+
             if (this.highlightedNodeId !== event.data.key) {
                 this.itemToStructure(event.data.name, event.data.imports);
                 this.highlightedNodeId = event.data.key;

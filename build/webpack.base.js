@@ -16,7 +16,7 @@ module.exports = {
         publicPath: config.publicPath,
         // Point sourcemap entries to original disk location
         //
-        devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath),
+        devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath)
         // Add /* filename */ comments to generated require()s in the output.
         // sourceMapFilename: "bundle.js.map",
         // pathinfo: true
@@ -69,11 +69,17 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery",
-            "CanvasJS": "CanvasJS",
+            CanvasJS: "CanvasJS",
             Popper: ["popper.js", "default"]
         }),
         new HtmlWebpackPlugin({
             title: config.title,
+            meta: {
+                viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
+                // Will generate: <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                "theme-color": "#4285f4"
+                // Will generate: <meta name="theme-color" content="#4285f4">
+            },
             template: path.resolve(__dirname, "index.html"),
             filename: _.outputIndexPath
         }),
