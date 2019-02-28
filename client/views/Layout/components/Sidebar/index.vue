@@ -44,6 +44,11 @@
             <li>
                 <a title="calculate intersections with ease" href="https://github.com/LogIN-/mulset" class="article" target="_blank">@mulset</a>
             </li>
+            <li>
+                <a style="text-align: center;" title="star us on github" href="https://github.com/LogIN-/fluprint.com" class="article" target="_blank">
+                    <img alt="GitHub forks" src="https://img.shields.io/github/forks/LogIN-/fluprint.com.svg?style=social">
+                </a>
+            </li>
         </ul>
 
         <a title="follow me on twitter" href="https://twitter.com/TomicAdriana" class="article" target="_blank">
