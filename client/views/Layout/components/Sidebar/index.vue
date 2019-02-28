@@ -36,7 +36,13 @@
         <ul class="list-unstyled components">
             <p>other:</p>
             <li>
-                <a title="Powerful, flexible, open-source and easy to use knowledge discovery application" href="https://github.com/genular/simon-frontend" class="article" target="_blank">@SIMON</a>
+                <a
+                    title="Powerful, flexible, open-source and easy to use knowledge discovery application"
+                    href="https://github.com/genular/simon-frontend"
+                    class="article"
+                    target="_blank"
+                    >@SIMON</a
+                >
             </li>
             <li>
                 <a title="open source fluprint database" href="https://github.com/LogIN-/fluprint" class="article" target="_blank">@fluprint</a>
@@ -45,8 +51,11 @@
                 <a title="calculate intersections with ease" href="https://github.com/LogIN-/mulset" class="article" target="_blank">@mulset</a>
             </li>
             <li>
+                <a href="#" class="article" @click.prevent="contactForm = true">contact me</a>
+            </li>
+            <li>
                 <a style="text-align: center;" title="star us on github" href="https://github.com/LogIN-/fluprint.com" class="article" target="_blank">
-                    <img alt="GitHub forks" src="https://img.shields.io/github/forks/LogIN-/fluprint.com.svg?style=social">
+                    <img alt="GitHub forks" src="https://img.shields.io/github/forks/LogIN-/fluprint.com.svg?style=social" />
                 </a>
             </li>
         </ul>
@@ -54,18 +63,53 @@
         <a title="follow me on twitter" href="https://twitter.com/TomicAdriana" class="article" target="_blank">
             <div class="bottom-nav" title="SIMON Says..."></div>
         </a>
+
+        <div class="main-contact panel panel-default" v-if="contactForm === true">
+            <div style="float: left;">Please contact me using form below:</div> <div style="float: right; cursor: pointer;" v-on:click="contactForm = false">close</div>
+            <div tabindex="-1" id="contactform" ref="contactform">
+                <iframe src="//mautic.genular.org/form/3" width="400" height="500"><p>Your browser does not support iframes.</p></iframe>
+            </div>
+        </div>
     </nav>
 </template>
 <script>
 export default {
     name: "SideBar",
     data() {
-        return {};
+        return {
+            contactForm: false
+        };
     },
-    mounted() {}
+    created() {},
+    mounted() {
+
+        console.log(this.$refs);
+    }
 };
 </script>
 <style rel="stylesheet/scss" lang="scss">
+.main-contact {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background-color: #7386d5;
+    opacity: 1;
+    padding: 50px;
+    width: 500px;
+    color: white;
+    display: block;
+    z-index: 999;
+    height: 600px;
+    margin-top: -300px;
+    margin-left: -250px;
+    p {
+        color: #ffffff;
+    }
+    iframe {
+        border: 0 none;
+        margin-top: 15px;
+    }
+}
 .bottom-nav {
     position: fixed;
     bottom: 5px;
