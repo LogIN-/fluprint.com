@@ -4,7 +4,7 @@
 </p>
 <p align="center">
     <a href="#reposize">
-        <img src="https://img.shields.io/github/repo-size/LogIN-/fluprint.com" /></a>
+        <img src="https://img.shields.io/github/repo-size/LogIN-/fluprint.com.svg" /></a>
     <a href="https://twitter.com/intent/follow?screen_name=TomicAdriana" alt="Follow me on twitter">
         <img src="https://img.shields.io/twitter/follow/atomic.svg?label=Follow&style=social&logo=twitter" alt="Follow me on twitter"></a>
     <a href="https://app.netlify.com/sites/fluprint/deploys" alt="Netlify Status">
