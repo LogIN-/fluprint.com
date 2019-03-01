@@ -10,7 +10,7 @@
             <li class="active">
                 <router-link to="about">About</router-link>
                 <router-link to="database">Database</router-link>
-                <router-link to="exploratory?page=edge">SIMON exploratory</router-link>
+                <router-link to="exploratory?page=edge">SIMON manuscript</router-link>
             </li>
             <!--
                 <li>

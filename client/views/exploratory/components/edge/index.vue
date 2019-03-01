@@ -49,13 +49,9 @@
                     <div class="heading">Exploratory analysis</div>
                     <div class="row block">
                         <div class="col-sm-12 description">
-                            SIMON successfully processed several models able to discriminate high and low influenza vaccine responders. In total, 127 features were selected across
-                            two datasets in models built with training and test AUROC≥0.7 and specificity/sensitivity>0.5. To further narrow down exploratory analysis and identify
-                            features of interest, we ordered features selected in models based on their variable importance score. The variable importance score is a measurement of
-                            the contribution of each feature to the model. This allowed us to explore in how many datasets and in how many different models, same features were
-                            selected and with which variable importance score. For example, the first feature CD27+ CD8+ T cells had the highest variable importance score in 5
-                            different machine learning algorithms in both datasets, indicating that this feature contributes to the discrimination of the high and low responders
-                            with high accuracy and reproducibility.
+                            Here you can interactively explore the data described in the paper "SIMON, an automated machine learning system reveals immune signatures of influenza vaccine responses".   The interactive circle graph shows summary results of the SIMON analysis. In total, 127 features were selected across two datasets (datasets 13 and 36) and six models were built. The variable importance score for each feature is ranked from 10 to 100. Features in the circle are ranked by the variable importance score.<br />
+                            To explore contribution of each feature, click on the feature of interest. Now you can visualize in how many datasets and in how many different models that feature was selected and with which variable importance score. Please note that information about distinct variable importance score is given.<br />
+                            Processed data and open source script are available <a style="color: blue;" href="https://github.com/LogIN-/simon-manuscript" target="_blank">at Github</a>.
                         </div>
                     </div>
                 </section>
