@@ -65,7 +65,8 @@
         </a>
 
         <div class="main-contact panel panel-default" v-if="contactForm === true">
-            <div style="float: left;">Please contact me using form below:</div> <div style="float: right; cursor: pointer;" v-on:click="contactForm = false">close</div>
+            <div style="float: left;">Please contact me using form below:</div>
+            <div style="float: right; cursor: pointer;" v-on:click="contactForm = false">close</div>
             <div tabindex="-1" id="contactform" ref="contactform">
                 <iframe src="//mautic.genular.org/form/3" width="400" height="500"><p>Your browser does not support iframes.</p></iframe>
             </div>
@@ -82,7 +83,6 @@ export default {
     },
     created() {},
     mounted() {
-
         console.log(this.$refs);
     }
 };
@@ -111,8 +111,7 @@ export default {
     }
 }
 .bottom-nav {
-    position: fixed;
-    bottom: 5px;
+    position: relative;
     background-image: url(/logo.png);
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row d3graph-container">
-            <div class="progress" style="margin-left: 15px;margin-right: 15px;margin-bottom: 25px;" v-if="loading">
+            <div class="progress" style="margin-left: 15px;margin-right: 15px;margin-bottom: 25px;" v-if="loadingData">
                 <div
                     class="progress-bar progress-bar-striped progress-bar-animated  bg-info"
                     role="progressbar"
@@ -30,7 +30,7 @@
                 <hierarchical-edge-bundling
                     class="graph-root"
                     ref="graph"
-                    :maxTextWidth="85"
+                    :maxTextWidth="125"
                     identifier="key"
                     :duration="duration"
                     @mouseNodeClick="mouseNodeClick"
@@ -77,7 +77,9 @@ export default {
     },
     data() {
         return {
-            loading: true,
+            loadingData: true,
+            currentFeaturePopover: false,
+
             duration: 50,
             marginX: 0,
             marginY: 0,
@@ -102,8 +104,8 @@ export default {
             })
                 .then(r => r.json())
                 .then(jsonData => {
-                    this.loading = false;
                     this.tree = jsonData;
+                    this.loadingData = false;
 
                     this.preselectFirstItem();
                 });
@@ -161,10 +163,14 @@ export default {
             }
         },
         mouseNodeOver(event) {
-            // this.onEvent("mouseNodeOver", event);
-            // this.changeCurrent(event.element);
+            console.log(event.data.key);
+            console.log(event.data.name);
+            console.log(event.data.imports);
         },
         mouseNodeOut(event) {
+            console.log("removing any popovers...");
+
+            $(this.currentFeaturePopover).popover('hide');
             // this.onEvent("mouseNodeOut", event);
             // this.changeCurrent(null);
         }
