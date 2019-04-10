@@ -11,7 +11,7 @@
         <img src="https://api.netlify.com/api/v1/badges/93301b7e-1afd-4b86-aea0-363a7071b33e/deploy-status" alt="Netlify Status"></a>
 </p>
 
-> fluprint.com
+> Welcome to repository of fluprint.com website
 
 ## Starting out
 ```bash
@@ -21,7 +21,8 @@ yarn run dev
 ```
 
 ## Security Vulnerabilities
-If you discover a security vulnerability within this repo, please send e-mail to me. All security vulnerabilities will be promptly addressed. You are also welcome to open PR request.
+If you discover a security vulnerability within this repo, please send e-mail me at [atomic@stanford.edu](mailto:atomic@stanford.edu). 
+All security vulnerabilities will be promptly addressed. You are also welcome to open PR request.
 
 ## License
 Please check `LICENCE` file for more information.
