@@ -49,12 +49,22 @@
                     <div class="heading">Exploratory analysis</div>
                     <div class="row block">
                         <div class="col-sm-12 description">
-                            Here you can interactively explore the data described in the paper "SIMON, an automated machine learning system reveals immune signatures of influenza vaccine responses".   The interactive circle graph shows summary results of the SIMON analysis. In total, 127 features were selected across two datasets (datasets 13 and 36) and six models were built. The variable importance score for each feature is ranked from 10 to 100. Features in the circle are ranked by the variable importance score.<br />
-                            To explore contribution of each feature, click on the feature of interest. Now you can visualize in how many datasets and in how many different models that feature was selected and with which variable importance score. Please note that information about distinct variable importance score is given.<br />
-                            Processed data and open source script are available <a style="color: blue;" href="https://github.com/LogIN-/simon-manuscript" target="_blank">at Github</a>.
+                            Here you can interactively explore the data described in the paper "SIMON, an automated machine learning system reveals immune signatures of influenza
+                            vaccine responses". The interactive circle graph shows summary results of the SIMON analysis. In total, 127 features were selected across two datasets
+                            (datasets 13 and 36) and six models were built. The variable importance score for each feature is ranked from 10 to 100. Features in the circle are
+                            ranked by the variable importance score.<br />
+                            To explore contribution of each feature, click on the feature of interest. Now you can visualize in how many datasets and in how many different models
+                            that feature was selected and with which variable importance score. Please note that information about distinct variable importance score is given.<br />
+                            Processed data and open source script are available
+                            <a style="color: blue;" href="https://github.com/LogIN-/simon-manuscript" target="_blank">at Github</a>.
                         </div>
                     </div>
                 </section>
+            </div>
+        </div>
+        <div class="page-loading-outer" v-if="pageLoading == true">
+            <div class="page-loading-inner spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
     </div>
@@ -73,7 +83,7 @@ export default {
     },
     data() {
         return {
-            loadingData: true,
+            pageLoading: true,
             currentFeaturePopover: false,
 
             duration: 50,
@@ -92,6 +102,7 @@ export default {
         };
     },
     mounted() {
+        this.pageLoading = true;
         if (this.tree === null) {
             fetch("/data.json", {
                 headers: new Headers({
@@ -101,9 +112,8 @@ export default {
                 .then(r => r.json())
                 .then(jsonData => {
                     this.tree = jsonData;
-                    this.loadingData = false;
-
                     this.preselectFirstItem();
+                    this.pageLoading = false;
                 });
         }
     },
@@ -166,7 +176,7 @@ export default {
         mouseNodeOut(event) {
             console.log("removing any popovers...");
 
-            $(this.currentFeaturePopover).popover('hide');
+            $(this.currentFeaturePopover).popover("hide");
             // this.onEvent("mouseNodeOut", event);
             // this.changeCurrent(null);
         }

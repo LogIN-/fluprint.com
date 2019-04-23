@@ -21,6 +21,11 @@
                 <img style="max-height: 50px; margin-left: 10px; " class="img-fluid" src="sponsors/nih-logo-color.png" />
             </div>
         </div>
+        <div class="page-loading-outer" v-if="pageLoading == true">
+            <div class="page-loading-inner spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -29,6 +34,7 @@ export default {
     name: "database-access",
     data() {
         return {
+            pageLoading: false,
             databaseData: null,
             hotSettings: {
                 colHeaders: true,
@@ -53,7 +59,8 @@ export default {
     },
     mounted() {
         this.hotRef = this.$refs.hotTableComponent.hotInstance;
-
+        this.pageLoading = true;
+        
         if (this.databaseData === null) {
             fetch("data/fluprint_database_example.csv", {
                 headers: new Headers({
@@ -71,6 +78,7 @@ export default {
                         .then(jsonData => {
                             this.databaseData = jsonData;
                             this.refreshTable();
+                            this.pageLoading = false;
                         });
                 });
         }
