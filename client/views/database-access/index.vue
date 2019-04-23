@@ -6,8 +6,8 @@
                 Here you can browse and download simplified data contained in FluPrint MySQL database. We suggest building database from source by following directions explained
                 <a style="color: #7386D5;" href="https://github.com/LogIN-/fluprint" target="_blank">here</a> on our
                 <a style="color: #7386D5;" href="https://github.com/LogIN-/fluprint" target="_blank">main git repository</a>. In the case you don't know want to do that you can
-                also <a style="color: #7386D5;" href="data/fluprint_database.csv" target="_blank">download full database export</a> in CSV format
-                <a style="color: #7386D5;" href="data/fluprint_database.csv" target="_blank">here</a>.
+                also <a style="color: #7386D5;" href="data/fluprint_database_full.csv" target="_blank">download full database export</a> in CSV format
+                <a style="color: #7386D5;" href="data/fluprint_database_full.csv" target="_blank">here</a>.
             </div>
 
             <section>
