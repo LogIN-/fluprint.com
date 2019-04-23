@@ -2,7 +2,7 @@
 * @Author: login
 * @Date:   2018-06-20 09:44:26
 * @Last Modified by:   LogIN-
-* @Last Modified time: 2019-02-11 17:14:09
+* @Last Modified time: 2019-04-22 16:36:12
 */
 
 body {
@@ -37,6 +37,7 @@ a {
     border-radius: 0;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .navbar-btn {
@@ -69,12 +70,13 @@ a {
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
+    z-index: 10;
+    height: 100%;
     &.active {
         margin-left: -250px;
     }
     .sidebar-header {
         padding: 20px;
-        background: #6d7fcc;
     }
     ul {
         &.components {
@@ -82,8 +84,11 @@ a {
             border-bottom: 1px solid #47748b;
         }
         p {
-            color: #fff;
-            padding: 10px;
+            color: #FFF;
+            padding-left: 10px;
+            font-size: 1.1em;
+            line-height: 1.1em;
+            font-weight: bold;
         }
         li {
             a {
@@ -164,7 +169,7 @@ a {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-    background-color: #ffffff;
+    z-index: 10;
 }
 
 .boxes{
@@ -183,10 +188,12 @@ a {
     section {
         width: 80%;
         margin: 0 auto;
-        background-color: #f8f9fa;
+        background-color: #FFFFFF;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         padding: 25px;
         border-radius: 25px;
         margin-top: 35px;
+        z-index: 10;
 
         .heading {
             text-align: left;

@@ -1,7 +1,7 @@
 {
-    "name": "fluprint",
+    "name": "FluPrint",
     "version": "0.1.0",
-    "description": "fluprint frontend",
+    "description": "FluPrint website",
     "main": "client/index.js",
     "scripts": {
         "test": "",
@@ -9,7 +9,7 @@
         "dev": "node build/server.js",
         "lint": "xo **/client/**/*.{vue,js} !node_modules/**"
     },
-    "author": "LogIN- <info@ivantomic.com>",
+    "author": "atomic <tomic.adriana@gmail.com>",
     "license": "MIT",
     "xo": {
         "extends": "./.eslintrc",
@@ -40,14 +40,20 @@
     ],
     "dependencies": {
         "axios": "^0.18.0",
+        "babel-preset-stage-2": "^6.24.1",
         "babel-runtime": "^6.18.0",
         "bootstrap": "^4.1.1",
+        "csvtojson": "^2.0.8",
         "d3": "^5.5.0",
+        "handsontable": "^7.0.2",
         "jquery": "^3.3.1",
         "offline-plugin": "^5.0.5",
         "popper.js": "^1.14.3",
         "promise-polyfill": "^6.0.2",
+        "save": "^2.3.3",
+        "save-dev": "^2.0.0",
         "vue": "^2.2.0",
+        "vue-particles": "^1.0.9",
         "vue-resize-directive": "^1.0.1",
         "vue-router": "^2.0.0",
         "vuex": "^2.0.0",

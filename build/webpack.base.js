@@ -81,7 +81,15 @@ module.exports = {
                 // Will generate: <meta name="theme-color" content="#4285f4">
             },
             template: path.resolve(__dirname, "index.html"),
-            filename: _.outputIndexPath
+            filename: _.outputIndexPath,
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            }
         }),
         new webpack.LoaderOptionsPlugin(_.loadersOptions()),
         new CopyWebpackPlugin([

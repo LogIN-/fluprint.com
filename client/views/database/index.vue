@@ -46,8 +46,9 @@
             </section>
             <div class="sponsors">
                 This work is supported by the EU’s Horizon 2020 research and innovation program under the Marie Sklodowska-Curie<br />
-                Grant (FluPRINT, Project No 796636)<br />
-                <img class="img-fluid" src="ec-logo-horiz-web_en.jpg" />
+                Grant (FluPRINT, Project No 796636) and National Institutes of Health (NIH) grants (U19 AI090019, U19 AI057229) <br />
+                <img style="max-height: 50px;" class="img-fluid" src="sponsors/ec-logo-horiz-web_en.jpg">
+                <img style="max-height: 50px; margin-left: 10px; "class="img-fluid" src="sponsors/nih-logo-color.png">
             </div>
         </div>
     </div>

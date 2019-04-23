@@ -2,7 +2,7 @@
 const pkg = require("../package");
 
 module.exports = {
-    title: "fluprint",
+    title: "FluPrint - Discover Influenza vaccine imprint on immune system",
     // Options for webpack-dev-server
     // See https://webpack.js.org/configuration/dev-server
     devServer: {

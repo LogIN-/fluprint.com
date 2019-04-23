@@ -21,7 +21,7 @@ yarn run dev
 ```
 
 ## Security Vulnerabilities
-If you discover a security vulnerability within this repo, please send e-mail me at [atomic@stanford.edu](mailto:atomic@stanford.edu). 
+If you discover a security vulnerability within this repo, please send e-mail me at [tomic.adriana@gmail.com](mailto:tomic.adriana@gmail.com). 
 All security vulnerabilities will be promptly addressed. You are also welcome to open PR request.
 
 ## License

@@ -7,7 +7,9 @@ import _import from "./_import.js";
 import Layout from "@/views/Layout";
 
 import About from "@/views/about";
+import AboutMe from "@/views/about-me";
 import Database from "@/views/database";
+import DatabaseAccess from "@/views/database-access";
 import Exploratory from "@/views/exploratory";
 
 Vue.use(Router);
@@ -29,6 +31,15 @@ const router = new Router({
                         icon: "fa fa-icon fa-tachometer",
                         noCache: true
                     }
+                },{
+                    path: "about-me",
+                    component: AboutMe,
+                    name: "about-me",
+                    meta: {
+                        title: "about-me",
+                        icon: "fa fa-icon fa-tachometer",
+                        noCache: true
+                    }
                 },
                 {
                     path: "database",
@@ -36,6 +47,16 @@ const router = new Router({
                     name: "database",
                     meta: {
                         title: "database",
+                        icon: "fa fa-icon fa-tachometer",
+                        noCache: true
+                    }
+                },
+                {
+                    path: "database-access",
+                    component: DatabaseAccess,
+                    name: "database-access",
+                    meta: {
+                        title: "database-access",
                         icon: "fa fa-icon fa-tachometer",
                         noCache: true
                     }
