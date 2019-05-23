@@ -1,0 +1,48 @@
+SELECT donors.id                        AS donor_id,
+       donors.study_id                  AS study_id,
+       donors.gender                    AS gender,
+       donors.race                      AS race,
+       donor_visits.id                  AS visit_id,
+       donor_visits.visit_year          AS visit_year,
+       donor_visits.visit_day           AS visit_day,
+       donor_visits.visit_type_hai      AS visit_type_hai,
+       donor_visits.age                 AS visit_age,
+       donor_visits.cmv_status          AS cmv_status,
+       donor_visits.ebv_status          AS ebv_status,
+       donor_visits.bmi                 AS bmi,
+       donor_visits.vaccine             AS vaccine,
+       donor_visits.geo_mean            AS geo_mean,
+       donor_visits.d_geo_mean          AS d_geo_mean,
+       donor_visits.vaccine_resp        AS vaccine_response,
+       experimental_data.id             AS mesurment_id,
+       experimental_data.assay          AS assay,
+       experimental_data.name           AS name,
+       experimental_data.name_formatted AS name_formatted,
+       experimental_data.subset         AS subset,
+       experimental_data.units          AS units,
+       experimental_data.data           AS data,
+       medical_history.statin_use,
+       medical_history.flu_vaccination_history,
+       medical_history.total_vaccines_received,
+       medical_history.vaccinated_1yr_prior,
+       medical_history.vaccine_type_1yr_prior,
+       medical_history.vaccinated_2yr_prior,
+       medical_history.vaccine_type_2yr_prior,
+       medical_history.vaccinated_3yr_prior,
+       medical_history.vaccine_type_3yr_prior,
+       medical_history.vaccinated_4yr_prior,
+       medical_history.vaccine_type_4yr_prior,
+       medical_history.vaccinated_5yr_prior,
+       medical_history.vaccine_type_5yr_prior,
+       medical_history.influenza_infection_history,
+       medical_history.influenza_hospitalization
+FROM   donors
+       LEFT JOIN donor_visits
+              ON donors.id = donor_visits.donor_id
+       INNER JOIN experimental_data
+               ON donor_visits.id = experimental_data.donor_visits_id
+                  AND experimental_data.donor_id = donor_visits.donor_id
+       INNER JOIN medical_history
+               ON donor_visits.id = medical_history.donor_visits_id
+                  AND medical_history.donor_id = donor_visits.donor_id
+ORDER  BY donors.id DESC

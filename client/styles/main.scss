@@ -1,0 +1,245 @@
+/*
+* @Author: login
+* @Date:   2018-06-20 09:44:26
+* @Last Modified by:   LogIN-
+* @Last Modified time: 2019-04-23 13:00:58
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover,
+    &:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+.page-loading-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0.85;
+}
+.page-loading-inner {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386d5;
+    color: #fff;
+    transition: all 0.3s;
+    z-index: 10;
+    height: 100%;
+    &.active {
+        margin-left: -250px;
+    }
+    .sidebar-header {
+        padding: 20px;
+    }
+    ul {
+        &.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+        p {
+            color: #fff;
+            padding-left: 10px;
+            font-size: 1.1em;
+            line-height: 1.1em;
+            font-weight: bold;
+        }
+        li {
+            a {
+                padding: 10px;
+                font-size: 1.1em;
+                display: block;
+                &:hover {
+                    color: #7386d5;
+                    background: #fff;
+                }
+            }
+            &.active > a {
+                color: #fff;
+                background: #6d7fcc;
+            }
+        }
+    }
+}
+
+a {
+    &[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
+    &[data-toggle="collapse"] {
+        position: relative;
+    }
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul {
+    ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+    }
+    &.CTAs {
+        padding: 20px;
+        a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+a {
+    &.download {
+        background: #fff;
+        color: #7386d5;
+    }
+    &.article {
+        background: #6d7fcc !important;
+        color: #fff !important;
+        &:hover {
+            background: #6d7fcc !important;
+            color: #fff !important;
+        }
+    }
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.boxes {
+    .title {
+        text-align: center;
+        font-size: 42px;
+        color: #454545;
+    }
+    .intro {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        font-style: italic;
+    }
+    section {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        border-radius: 25px;
+        margin-top: 35px;
+        z-index: 10;
+
+        .heading {
+            text-align: left;
+            font-size: 24px;
+            color: #454545;
+        }
+        .block {
+            margin-top: 35px;
+        }
+        .row {
+            .description {
+                text-align: justify;
+            }
+        }
+    }
+}
+.sponsors {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        &.active {
+            margin-left: 0;
+        }
+    }
+}
