@@ -46,7 +46,7 @@
         "csvtojson": "^2.0.8",
         "d3": "^5.5.0",
         "handsontable": "^7.0.2",
-        "jquery": "^3.3.1",
+        "jquery": "^3.4.0",
         "offline-plugin": "^5.0.5",
         "popper.js": "^1.14.3",
         "promise-polyfill": "^6.0.2",
