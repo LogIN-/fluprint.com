@@ -3,7 +3,7 @@
         <div class="boxes">
             <div class="title">FluPRINT on-line interface</div>
             <div class="intro" style="font-size: 16px;max-width: 80%;">
-                Here you can browse and download simplified data contained in FluPrint MySQL database. We suggest building database from source by following directions explained
+                Here you can browse simplified example data contained in FluPrint MySQL database. We suggest building database from source by following directions explained
                 <a style="color: #7386D5;" href="https://github.com/LogIN-/fluprint" target="_blank">here</a> on our
                 <a style="color: #7386D5;" href="https://github.com/LogIN-/fluprint" target="_blank">main git repository</a>. In the case you don't know want to do that you can
                 also <a style="color: #7386D5;" href="https://zenodo.org/record/3222451#.XOb7MaR7lPY" target="_blank">download full database export</a> in CSV format
@@ -37,7 +37,6 @@ export default {
             pageLoading: false,
             databaseData: null,
             hotSettings: {
-                colHeaders: true,
                 minSpareRows: 1,
                 stretchH: "all",
 
@@ -47,8 +46,49 @@ export default {
                 manualRowResize: true,
                 manualColumnResize: true,
                 rowHeaders: true,
-                manualRowMove: true,
-                manualColumnMove: true,
+                colHeaders: [
+                    "donor_id",
+                    "study_id",
+                    "gender",
+                    "race",
+                    "visit_id",
+                    "visit_year",
+                    "visit_day",
+                    "visit_type_hai",
+                    "visit_age",
+                    "cmv_status",
+                    "ebv_status",
+                    "bmi",
+                    "vaccine",
+                    "geo_mean",
+                    "d_geo_mean",
+                    "vaccine_response",
+                    "mesurment_id",
+                    "mesurment_assay",
+                    "mesurment_name",
+                    "mesurment_name_formatted",
+                    "mesurment_subset",
+                    "mesurment_units",
+                    "mesurment_data",
+                    "statin_use",
+                    "flu_vaccination_history",
+                    "total_vaccines_received",
+                    "vaccinated_1yr_prior",
+                    "vaccine_type_1yr_prior",
+                    "vaccinated_2yr_prior",
+                    "vaccine_type_2yr_prior",
+                    "vaccinated_3yr_prior",
+                    "vaccine_type_3yr_prior",
+                    "vaccinated_4yr_prior",
+                    "vaccine_type_4yr_prior",
+                    "vaccinated_5yr_prior",
+                    "vaccine_type_5yr_prior",
+                    "influenza_infection_history",
+                    "influenza_hospitalization"
+                ],
+
+                manualRowMove: false,
+                manualColumnMove: false,
                 contextMenu: true,
                 filters: true,
                 dropdownMenu: true,
@@ -60,7 +100,7 @@ export default {
     mounted() {
         this.hotRef = this.$refs.hotTableComponent.hotInstance;
         this.pageLoading = true;
-        
+
         if (this.databaseData === null) {
             fetch("data/fluprint_database_example.csv", {
                 headers: new Headers({
