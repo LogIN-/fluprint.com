@@ -71,12 +71,12 @@ export default {
                     "d_geo_mean",
                     "vaccine_response",
                     "mesurment_id",
-                    "mesurment_assay",
-                    "mesurment_name",
-                    "mesurment_name_formatted",
-                    "mesurment_subset",
-                    "mesurment_units",
-                    "mesurment_data",
+                    "assay",
+                    "name",
+                    "name_formatted",
+                    "subset",
+                    "units",
+                    "data",
                     "statin_use",
                     "flu_vaccination_history",
                     "total_vaccines_received",
@@ -124,7 +124,6 @@ export default {
                         .fromString(response)
                         .then(jsonData => {
                             this.databaseData = jsonData;
-                            console.log("Bam");
 
                             this.refreshTable();
                             this.pageLoading = false;
@@ -134,6 +133,7 @@ export default {
     },
     methods: {
         refreshTable() {
+            this.hotRef.loadData(this.databaseData);
             this.hotRef.loadData(this.databaseData);
         }
     }
