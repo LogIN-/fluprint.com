@@ -2,7 +2,7 @@
  * @Author: LogIN-
  * @Date:   2018-06-21 16:17:37
  * @Last Modified by:   LogIN-
- * @Last Modified time: 2019-04-22 16:17:47
+ * @Last Modified time: 2019-08-22 12:27:09
  */
 
 import Vue from "vue";
@@ -24,7 +24,7 @@ router.beforeEach((to, from, next) => {
 	next();
 });
 Vue.use(VueParticles);
-Vue.component("hot-table", Handsontable.vue.HotTable);
+
 const app = new Vue({
 	router,
 	store,

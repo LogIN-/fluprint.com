@@ -12,7 +12,8 @@
 
             <section>
                 <div v-show="databaseData === null">Please wait, loading example data...</div>
-                <hot-table ref="hotTableComponent" :settings="hotSettings"></hot-table>
+
+                <hotTable ref="hotTableComponent" :settings="hotSettings"></hotTable>
             </section>
             <div class="sponsors">
                 This work is supported by the EU’s Horizon 2020 research and innovation program under the Marie Sklodowska-Curie<br />
@@ -30,8 +31,14 @@
 </template>
 <script>
 import * as csv from "csvtojson";
+
+import { HotTable } from "@handsontable/vue";
+
 export default {
     name: "database-access",
+    components: {
+        HotTable: HotTable
+    },
     data() {
         return {
             pageLoading: false,
@@ -117,6 +124,8 @@ export default {
                         .fromString(response)
                         .then(jsonData => {
                             this.databaseData = jsonData;
+                            console.log("Bam");
+
                             this.refreshTable();
                             this.pageLoading = false;
                         });
@@ -125,7 +134,6 @@ export default {
     },
     methods: {
         refreshTable() {
-            this.hotRef.loadData(this.databaseData);
             this.hotRef.loadData(this.databaseData);
         }
     }

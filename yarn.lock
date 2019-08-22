@@ -100,6 +100,13 @@
   resolved "https://registry.yarnpkg.com/@handsontable/jstat/-/jstat-1.0.0.tgz#0cb40e6ee44e2e0188bf047c43551920ae220270"
   integrity sha512-5XxZ9xIk6iSjrc1p5N/yI2dofBXp0IzZVgrkETDC196SxoJCRNOeKgM9fTHMhoxa02wuaZPLp6stojlppNxP/A==
 
+"@handsontable/vue@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@handsontable/vue/-/vue-4.1.0.tgz#e4d6800a450c270fb329434b6b5f4d0d2772f89e"
+  integrity sha512-8eLisDvgWoGBxbqg4AYQAGi8JWRgwsxJe+r0hrC4MM9hPV2JgTz2ZofDDRZXhqfPAhBGu9I4I6nAEIXluHBoog==
+  dependencies:
+    tslib "^1.9.3"
+
 "@types/node@^10.11.7":
   version "10.12.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.27.tgz#eb3843f15d0ba0986cc7e4d734d2ee8b50709ef8"
@@ -2024,6 +2031,11 @@ core-js@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.0.1.tgz#1343182634298f7f38622f95e73f54e48ddf4738"
   integrity sha512-sco40rF+2KlE0ROMvydjkrVMMG1vYilP2ALoRXcYR4obqbYIuV3Bg+51GEDW+HF8n7NRA+iaA4qD0nD9lo9mew==
+
+core-js@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
+  integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -4044,14 +4056,14 @@ handle-thing@^1.2.5:
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"
   integrity sha1-/Xqtcmvxpf0W38KbL3pmAdJxOcQ=
 
-handsontable@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/handsontable/-/handsontable-7.0.2.tgz#f3d37aef6dad56de8cf6ea0cad22730b100b6d2c"
-  integrity sha512-6H5SeKVuIic4OV1Jdsv8q7EPNGyWVgC5XWahLhUHWTrYsrluqy1ZzWLzswqbxKiVvWdWGgt7+ze0nfqVR5bSkw==
+handsontable@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/handsontable/-/handsontable-7.1.1.tgz#97553bbd6d615cce5d1203c4f7522d7aa7248d9f"
+  integrity sha512-qE7z6/IBrNq8r/jQT8trFAqiBYa05mDvyuqfhiBg6r09GKcqPs74S6RbmR+dAKfszvFhpukk19SZKUQOoYDbWg==
   dependencies:
     "@types/pikaday" "1.6.0"
     core-js "^3.0.0"
-    hot-formula-parser "^3.0.0"
+    hot-formula-parser "^3.0.1"
     moment "2.20.1"
     numbro "2.1.1"
     pikaday "1.5.1"
@@ -4187,7 +4199,7 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
   integrity sha512-7T/BxH19zbcCTa8XkMlbK5lTo1WtgkFi3GvdWEyNuc4Vex7/9Dqbnpsf4JMydcfj9HCg4zUWFTL3Za6lapg5/w==
 
-hot-formula-parser@^3.0.0:
+hot-formula-parser@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/hot-formula-parser/-/hot-formula-parser-3.0.1.tgz#9ec0d3abd691d9dbe3febec51027ebb7d4f1efd4"
   integrity sha512-QhYPVlVh/GF/hHtBp+MwgDp5kpgrrjeJi3d3/GxTWtqwLBOOM4KlZT/YWcsfZj5JE68MNvFgj3ZzYpkGyvGtwA==
@@ -8251,6 +8263,11 @@ trim-right@^1.0.1:
   integrity sha512-m6s2OdQe5wgpFMC+pAJ+q9djG82O2jcHPOI6RNg1yy9rCYR+WD6Nbpl32fDpfC56nirdRy+opFa/Vk7HYhqaew==
   dependencies:
     glob "^7.1.2"
+
+tslib@^1.9.3:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
+  integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
 tty-browserify@0.0.0:
   version "0.0.0"
