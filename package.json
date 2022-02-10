@@ -62,7 +62,7 @@
         "vuex-router-sync": "^4.0.0"
     },
     "peerDependencies": {
-        "node-sass": "^4.7.2"
+        "node-sass": "^7.0.0"
     },
     "devDependencies": {
         "autoprefixer": "^6.4.0",
@@ -84,7 +84,7 @@
         "file-loader": "^0.9.0",
         "friendly-errors-webpack-plugin": "^1.1.2",
         "html-webpack-plugin": "^2.22.0",
-        "node-sass": "^4.7.2",
+        "node-sass": "^7.0.0",
         "postcss-loader": "^0.9.1",
         "postcss-nested": "^1.0.0",
         "raw-loader": "^0.5.1",
